@@ -27,7 +27,7 @@
                 </div>
                 <div class="thumbs">
                     <div class="thumbs-img">
-                        <div class="single-thumbs-img" v-for="element in slides">
+                        <div class="single-thumbs-img" :class="{activegrey: slideActive === index}" v-for="element, index in slides">
                             <img :src="element.image" :alt="element.title">
                         </div>
                     </div>
