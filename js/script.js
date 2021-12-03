@@ -62,5 +62,8 @@ const app = new Vue({
 		const autoForwardSlide = setInterval(() => {
 			this.forwardSlide();
 		}, 3000);
+		stopAutoForwardSlide = function() {
+			this.clearInterval(autoForwardSlide);
+		};
 	}
 });
