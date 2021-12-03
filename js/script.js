@@ -57,5 +57,10 @@ const app = new Vue({
 		changeActiveSlide: function(index) {
 			this.slideActive = index;
 		}
+	},
+	created: function() {
+		autoForwardSlide = setInterval(() => {
+			this.forwardSlide();
+		}, 3000);
 	}
 });
