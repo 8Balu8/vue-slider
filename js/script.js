@@ -50,6 +50,8 @@ const app = new Vue({
 		backwardSlide: function() {
 			if (this.slideActive > 0) {
 				this.slideActive--;
+			} else {
+				this.slideActive = this.slides.length - 1;
 			}
 		}
 	}
