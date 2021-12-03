@@ -59,7 +59,7 @@ const app = new Vue({
 		}
 	},
 	created: function() {
-		autoForwardSlide = setInterval(() => {
+		const autoForwardSlide = setInterval(() => {
 			this.forwardSlide();
 		}, 3000);
 	}
