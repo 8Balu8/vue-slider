@@ -53,6 +53,9 @@ const app = new Vue({
 			} else {
 				this.slideActive = this.slides.length - 1;
 			}
+		},
+		changeActiveSlide: function(index) {
+			this.slideActive = index;
 		}
 	}
 });
