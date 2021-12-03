@@ -38,5 +38,14 @@ const app = new Vue({
 					'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam'
 			}
 		]
+	},
+	methods: {
+		forwardSlide: function() {
+			if (this.slideActive < this.slides.length - 1) {
+				this.slideActive++;
+			} else {
+				this.slideActive = 0;
+			}
+		}
 	}
 });
