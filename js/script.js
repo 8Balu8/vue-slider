@@ -46,6 +46,11 @@ const app = new Vue({
 			} else {
 				this.slideActive = 0;
 			}
+		},
+		backwardSlide: function() {
+			if (this.slideActive > 0) {
+				this.slideActive--;
+			}
 		}
 	}
 });
