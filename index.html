@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="root">
+        <div class="app-container">
+            <div class="slider">
+                <div class="img-container">
+                <div class="single-img">
+                        <img :src="slides[slideActive].image" :alt="slides[slideActive].title">
+                        <div class="single-img-text">
+                            <h3>{{slides[slideActive].title}}</h3>
+                            <p>{{slides[slideActive].text}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="thumbs">
+                    <div class="thumbs-img">
+                        <div class="single-thumbs-img" v-for="element in slides">
+                            <img :src="element.image" :alt="element.title">
+                        </div>
+                    </div>
+                    <div class="arrow top">
+                        <a href="#">
+                            <i class="fas fa-arrow-circle-up"></i>
+                        </a>
+                    </div>
+                    <div class="arrow dwn">
+                        <a href="#">
+                            <i class="fas fa-arrow-circle-down"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
