@@ -7,6 +7,7 @@ Vue.config.devtools = true;
 const app = new Vue({
 	el: '#root',
 	data: {
+		autoForwardSlide: null,
 		slideActive: 0,
 		slides: [
 			{
@@ -56,14 +57,17 @@ const app = new Vue({
 		},
 		changeActiveSlide: function(index) {
 			this.slideActive = index;
+		},
+		autoNextSlide: function() {
+			this.autoForwardSlide = setInterval(() => {
+				this.forwardSlide();
+			}, 3000);
+		},
+		stopAutoNextSlide: function() {
+			clearInterval(this.autoForwardSlide);
 		}
 	},
 	created: function() {
-		const autoForwardSlide = setInterval(() => {
-			this.forwardSlide();
-		}, 3000);
-		stopAutoForwardSlide = function() {
-			this.clearInterval(autoForwardSlide);
-		};
+		this.autoNextSlide();
 	}
 });

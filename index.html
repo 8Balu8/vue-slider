@@ -15,7 +15,7 @@
 <body>
     <div id="root">
         <div class="app-container">
-            <div @mouseenter="stopAutoForwardSlide" class="slider">
+            <div @mouseenter="stopAutoNextSlide" @mouseleave="autoNextSlide" class="slider">
                 <div class="img-container">
                 <div class="single-img">
                         <img :src="slides[slideActive].image" :alt="slides[slideActive].title">
